@@ -1,15 +1,11 @@
 import React from 'react';
-import { Button } from 'antd';
+import BaseLayout from "../Layouts/Base";
 import '../Styles/app.less';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Button type="primary">Button</Button>
-      </header>
-    </div>
-  );
+const App = () => {
+  return (<BaseLayout>
+    some text 123
+  </BaseLayout>);
 }
 
 export default App;
