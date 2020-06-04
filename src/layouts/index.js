@@ -1,17 +1,11 @@
 import { BrowserRouter } from 'react-router-dom';
-import React, { useContext } from 'react';
-import AuthorizedRoutes from '../routes/authenticated-routes';
-import UnAuthorizedRoutes from '../routes/unauthenticated-routes';
-import { CurrentUserContext } from '../contexts/currentUser';
+import React from 'react';
+import Routes from '../routes';
 
-const AppLayout = () => {
-  const [user] = useContext(CurrentUserContext);
-
-  return (
-    <BrowserRouter>
-      {user ? <AuthorizedRoutes /> : <UnAuthorizedRoutes />}
-    </BrowserRouter>
-  );
-};
+const AppLayout = () => (
+  <BrowserRouter>
+    <Routes />
+  </BrowserRouter>
+);
 
 export default AppLayout;
