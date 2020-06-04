@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Welcome from '../pages/welcome';
-import Login from '../pages/login';
-import Register from '../pages/register';
+import Login from '../pages/auth/login';
+import Register from '../pages/auth/register';
 import NotFound from '../pages/notFound';
 
 export default () => (
