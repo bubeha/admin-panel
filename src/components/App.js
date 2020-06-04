@@ -1,12 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Routes from '../routes';
-import '../styles/app.less';
+import AppLayout from '../layouts';
+import { CurrentUserProvider } from '../contexts/currentUser';
 
 const App = () => (
-  <Router>
-    <Routes />
-  </Router>
+  <CurrentUserProvider>
+    <AppLayout />
+  </CurrentUserProvider>
 );
 
 export default App;
