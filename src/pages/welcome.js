@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Redirect } from 'react-router-dom';
+import { CurrentUserContext } from '../contexts/currentUser';
 
-const welcome = () => (
-  <Redirect to={{
-    pathname: '/login',
-  }}
-  />
-);
+const Welcome = () => {
+  const [user] = useContext(CurrentUserContext);
 
-export default welcome;
+  if (user) {
+    return (
+      <Redirect to={{
+        pathname: '/dashboard',
+      }}
+      />
+    );
+  }
+
+  return (
+    <Redirect to={{
+      pathname: '/login',
+    }}
+    />
+  );
+};
+
+export default Welcome;
