@@ -1,10 +1,12 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 const CurrentUserContext = createContext(null);
 
 const CurrentUserProvider = ({ children }) => {
-  const [state, setState] = useState(null);
+  const [currentUser] = useLocalStorage('user');
+  const [state, setState] = useState(currentUser ? JSON.parse(currentUser) : null);
 
   return (
     <CurrentUserContext.Provider value={[state, setState]}>
