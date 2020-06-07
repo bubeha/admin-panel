@@ -1,20 +1,24 @@
-import React, { useContext } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
-import NotFound from '../pages/notFound';
-import Welcome from '../pages/welcome';
-import Login from '../pages/auth/login';
-import Dashboard from '../pages/dashboard';
-import { CurrentUserContext } from '../contexts/currentUser';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import routes from './routes';
 
-export default () => {
-  const [user] = useContext(CurrentUserContext);
+const renderRoute = (route) => {
+  const Router = route.router ? route.router : Route;
 
   return (
-    <Switch>
-      <Route path="/" component={Welcome} exact />
-      {user ? <Route path="/dashboard" component={Dashboard} exact /> : <Redirect from="/dashboard" to="/login" />}
-      {user ? <Redirect from="/login" to="/" /> : <Route path="/login" component={Login} />}
-      <Route path="*" component={NotFound} />
-    </Switch>
+    <Router
+      exact={route.exact}
+      path={route.path}
+      component={route.component}
+      key={route.key}
+    />
   );
 };
+
+const renderRoutes = () => routes.map((route) => renderRoute(route));
+
+export default () => (
+  <Switch>
+    {renderRoutes()}
+  </Switch>
+);
