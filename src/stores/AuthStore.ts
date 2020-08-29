@@ -23,4 +23,10 @@ export default class AuthStore {
       return response;
     });
   };
+
+  @action loadCurrentUser = (): void => {
+    this.apiManager.loadCurrentUser().then(async (response: Response) => {
+      this._user = (await response.json()) as User;
+    });
+  };
 }

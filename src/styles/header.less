@@ -1,0 +1,28 @@
+.header {
+  &__sider-toggler {
+    color: @layout-header-color;
+  }
+
+  &__account-dropdown {
+    float: right;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: @layout-header-color;
+
+    @margin: 0.3rem;
+
+    .ant-avatar {
+      margin-right: @margin;
+    }
+
+    .anticon {
+      margin-left: @margin;
+    }
+  }
+
+  &__account-menu {
+    padding: 10px;
+  }
+}
