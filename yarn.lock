@@ -1009,7 +1009,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.2":
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.7.6":
   version "7.11.2"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
   integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
@@ -5425,6 +5425,13 @@ history@^4.9.0:
     tiny-warning "^1.0.0"
     value-equal "^1.0.1"
 
+history@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/history/-/history-5.0.0.tgz#0cabbb6c4bbf835addb874f8259f6d25101efd08"
+  integrity sha512-3NyRMKIiFSJmIPdq7FxkNMJkQ7ZEtVblOQ38VtKaA0zZMW1Eo6Q6W8oDKEflr1kNNTItSnk4JMCO1deeSgbLLg==
+  dependencies:
+    "@babel/runtime" "^7.7.6"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -7404,6 +7411,23 @@ mkdirp@^0.5.1, mkdirp@^0.5.3, mkdirp@~0.5.1:
   integrity sha512-P+2gwrFqx8lhew375MQHHeTlY8AuOJSrGf0R5ddkEndUkmwpgUob/vQuBD1V22/Cw1/lJr4x+EjllSezBThzBg==
   dependencies:
     minimist "^1.2.5"
+
+mobx-react-lite@>=2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/mobx-react-lite/-/mobx-react-lite-2.2.0.tgz#95eecde237367af1087cc5c51d962ae081b6d1de"
+  integrity sha512-FUPacb4bk21qp/wrEv2vPcqC314nGRgHQzzIPHVBGAT5GtzaYiwvMHx192/Vy8TyI4+8H5JY9689jnvDOvLRuQ==
+
+mobx-react@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-6.3.0.tgz#7d11799f988bbdadc49e725081993b18baa20329"
+  integrity sha512-C14yya2nqEBRSEiJjPkhoWJLlV8pcCX3m2JRV7w1KivwANJqipoiPx9UMH4pm6QNMbqDdvJqoyl+LqNu9AhvEQ==
+  dependencies:
+    mobx-react-lite ">=2.2.0"
+
+mobx@^5.15.6:
+  version "5.15.6"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-5.15.6.tgz#24750af56f87bcf9c3cf82ece4c79eb91bb71968"
+  integrity sha512-U5nnx3UNdRkUjntpwzO060VWifGVx/JZeu/aMw4y28dTjDNjoY3vNKs6tFNm7z1qIfcPInsd9L9HIm8H0zTDqg==
 
 moment@^2.24.0, moment@^2.25.3:
   version "2.26.0"
