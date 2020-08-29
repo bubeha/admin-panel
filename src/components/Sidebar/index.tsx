@@ -2,7 +2,7 @@ import React from "react";
 import { Layout, Menu } from "antd";
 import { DashboardOutlined } from "@ant-design/icons";
 
-const Sidebar = ({menuConfig}) => {
+const Sidebar = () => {
   return (
     <Layout.Sider
       trigger={ null }
@@ -18,6 +18,6 @@ const Sidebar = ({menuConfig}) => {
 
     </Layout.Sider>
   );
-}
+};
 
 export default Sidebar;

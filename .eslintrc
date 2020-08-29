@@ -1,45 +1,41 @@
 {
-  "extends": "airbnb",
-  "plugins": [
-    "react"
+  "extends": [
+      "airbnb-typescript",
+      "airbnb/hooks",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:jest/recommended",
+      "prettier",
+      "prettier/react",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended"
   ],
+  "plugins": [ "react", "@typescript-eslint", "jest" ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 10
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "rules": {
-    "react/jsx-filename-extension": [
-      1,
+    "linebreak-style": "off",
+    "prettier/prettier": [
+        "error",
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "endOfLine": "auto"
       }
     ],
-    "no-console": "off",
-    "no-restricted-syntax": [
-      "error",
-      {
-        "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace)$/]",
-        "message": "Unexpected property on console object was called"
-      }
-    ],
-    "react/jsx-props-no-spreading": [
-      "error",
-      {
-        "html": "ignore",
-        "custom": "ignore",
-        "exceptions": [
-          ""
-        ]
-      }
-    ]
-  },
-  "env": {
-    "browser": true,
-    "node": true
+    "react/jsx-props-no-spreading": "off",
   }
 }
