@@ -1,10 +1,6 @@
-import React from 'react';
-import BaseLayout from '../layouts/Base';
+import React from "react";
+import Layout from "../layouts";
 
-const DashboardPage = () => (
-  <BaseLayout>
-    Dashboard
-  </BaseLayout>
-);
+const DashboardPage: React.FC = () => <Layout>Dashboard</Layout>;
 
 export default DashboardPage;

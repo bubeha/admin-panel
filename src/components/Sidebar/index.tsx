@@ -1,23 +1,21 @@
 import React from "react";
-import { Layout, Menu } from "antd";
-import { DashboardOutlined } from "@ant-design/icons";
+import { Layout } from "antd";
+import PropTypes from "prop-types";
 
-const Sidebar = () => {
+interface Props {
+  collapsed: boolean;
+}
+
+const Sidebar: React.FC<Props> = ({ collapsed }) => {
   return (
-    <Layout.Sider
-      trigger={ null }
-    >
-      <div className="brand">
-
-      </div>
-      <Menu defaultSelectedKeys={ ['1'] }>
-        <Menu.Item key="1" icon={ <DashboardOutlined /> }>
-          Dashboard
-        </Menu.Item>
-      </Menu>
-
+    <Layout.Sider trigger={null} collapsible collapsed={collapsed}>
+      <div className="brand" />
     </Layout.Sider>
   );
+};
+
+Sidebar.propTypes = {
+  collapsed: PropTypes.bool.isRequired,
 };
 
 export default Sidebar;
